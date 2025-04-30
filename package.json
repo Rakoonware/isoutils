@@ -1,0 +1,72 @@
+{
+  "name": "isoutils",
+  "version": "1.0.0",
+  "description": "Isomorphic utilities to speed up your development process",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.MD"
+  ],
+  "homepage": "https://github.com/Rakoonware/isoutils#readme",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "prepublishOnly": "npm run build",
+    "rebuild": "tsc --build --force",
+    "test": "node --import tsx/esm --test tests/**/*.test.ts",
+    "type-check": "tsc --build --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsx": "^4.19.4",
+    "typescript": "~5.8.3"
+  },
+  "author": {
+    "name": "Julian Paniagua",
+    "email": "75920118+JulianPaniagua@users.noreply.github.com",
+    "url": "https://github.com/JulianPaniagua"
+  },
+  "keywords": [
+    "isomorphic",
+    "util",
+    "utils",
+    "utilities",
+    "typescript",
+    "javascript"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/Rakoonware/isoutils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rakoonware/isoutils.git"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/Rakoonware/isoutils?sponsor=1"
+    },
+    {
+      "type": "airtm",
+      "url": "https://airtm.me/codigostutorial"
+    }
+  ],
+  "directories": {
+    "lib": "src",
+    "test": "tests"
+  },
+  "engines": {
+    "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext",
+    "tsBuildInfoFile": "node_modules/.tmp/tsconfig.lib.tsbuildinfo",
+    "types": []
+  }
+}

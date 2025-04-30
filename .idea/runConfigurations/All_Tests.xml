@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="All Tests" type="NodeJsTestRunner">
+    <node-interpreter value="project" />
+    <working-dir value="$PROJECT_DIR$" />
+    <language value="TYPE_SCRIPT" />
+    <typescript-loader value="TSX" />
+    <envs>
+      <env name="NODE_ENV" value="test" />
+    </envs>
+    <scope-kind value="ALL" />
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,0 +1,52 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+      - 'releases/**'
+    paths-ignore:
+      - '*.md'
+  pull_request:
+    paths-ignore:
+      - '*.md'
+
+permissions:
+  contents: read
+
+# Cancel in progress workflows
+# in the scenario where we already had a run going for that PR/branch/tag but then triggered a new run
+concurrency:
+  group: "${{ github.workflow }} ✨ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Configure npm loglevel
+        run: |
+          npm config set loglevel error
+        shell: bash
+
+      - name: Install dependencies
+        run: npm install --include=dev
+
+      - name: Output Node and NPM versions
+        run: |
+          echo "Node.js version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+
+      - name: Run tests
+        shell: bash
+        run: npm test

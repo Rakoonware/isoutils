@@ -1,0 +1,16 @@
+*   text=auto
+
+# Terminal scripts required specific line endings
+*.bash  text eol=lf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# Tell GitHub Linguist to treat ALL .ts files as TypeScript
+*.ts    text linguist-language=TypeScript
+*.mts   text linguist-language=TypeScript
+*.cts   text linguist-language=TypeScript
+
+# Configuration files
+*.lock            text -diff
+package.json      text
+package-lock.json text -diff
