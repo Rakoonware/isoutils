@@ -1,6 +1,6 @@
 {
   "name": "isoutils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Isomorphic utilities to speed up your development process",
   "license": "MIT",
   "type": "module",
@@ -53,10 +53,6 @@
     "url": "git+https://github.com/Rakoonware/isoutils.git"
   },
   "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/Rakoonware/isoutils?sponsor=1"
-    },
     {
       "type": "airtm",
       "url": "https://airtm.me/codigostutorial"
