@@ -39,7 +39,7 @@ function defineConfig(config?: DeepPartial<MyConfig>): MyConfig {
 Make a type `Required` recursively
 
 ```typescript
-import type { DeepPartial } from 'isoutils';
+import type { DeepRequired } from 'isoutils';
 
 function defineConfig(config?: DeepRequired<MyConfig>): MyConfig {
 }
